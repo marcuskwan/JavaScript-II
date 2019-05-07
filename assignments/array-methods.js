@@ -59,6 +59,7 @@ let fullName = [];
 const getNames = object => {
     fullName.push(object.first_name,object.last_name);
 }
+
 runners.forEach(getNames);
 console.log(fullName);
 

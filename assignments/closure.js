@@ -19,11 +19,11 @@ function kingdom() {
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
-  const incrementCount = () => {
-    let count = 0;
-    return count++;
-  };
-  incrementCount();
+  let count = 0; 
+  return function () {
+      count = count+1;
+      return count;
+  }
   // Return a function that when invoked increments and returns a counter variable.
 };
 // Example usage: const newCounter = counter();
