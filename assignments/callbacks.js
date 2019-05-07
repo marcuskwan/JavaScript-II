@@ -29,30 +29,51 @@ function getLength(arr, cb) {
   return cb(arr.length);
 }
 
+getLength(items,function(length){
+  console.log(length);
+})
+
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
   return cb(arr[arr.length - 1]);
 }
+
+last(items,function(last){
+  console.log(last);
+})
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   return cb(x + y);
 }
 
+sumNums(items,function(sum){
+  console.log(sum);
+})
+
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
   return cb(x * y);
 }
 
+multiplyNums(items,function(product){
+  console.log(product);
+})
+
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  if (list.item) {
+  for (let i = 0; i < items.length; i++)
+  if (list[i]===item) {
     return cb(true);
   } else {
     return cb(false);
   }
 }
+
+contains("Pencil",items,function(answer){
+  console.log(answer);
+})
 
 /* STRETCH PROBLEM */
 
