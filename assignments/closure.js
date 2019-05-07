@@ -1,6 +1,19 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
+function kingdom () {
+  const castle = "Castle";
+  console.log(`I am the ${castle} in the parent original scope.`)
+  nobility();
+  function nobility () {
+    const king = "King";
+    console.log(`I am the ${king} in the children scope.`);
+    children();
+    function heir () {
+      const prince = "Prince";
+      console.log(`I am the ${prince} in the grandchild scope`);
+    }
+  }
+}
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
